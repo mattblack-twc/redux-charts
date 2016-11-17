@@ -1,19 +1,14 @@
-import React, {PropTypes} from 'react';
-import Header from './common/Header';
+import React, { Component } from 'react';
+import SearchBar from '../containers/search_bar';
+import WeatherList from '../containers/weather_list';
 
-class App extends React.Component {
+export default class App extends Component {
   render() {
     return (
-      <div className="container-fluid">
-        <Header/>
-        {this.props.children}
+      <div>
+        <SearchBar />
+        <WeatherList />
       </div>
     );
   }
 }
-
-App.propTypes = {
-  children: PropTypes.object.isRequired
-};
-
-export default App;
